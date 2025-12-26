@@ -8,7 +8,7 @@
     <classes>
       <class name="com.crumhealthtest.test.Rough">
         <methods>
-          <include name="loginWithoutUsernameWithPassword"/>
+          <include name="testing"/>
           <include name="Close"/>
           <include name="launchApp"/>
         </methods>

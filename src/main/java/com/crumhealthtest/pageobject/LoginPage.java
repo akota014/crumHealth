@@ -5,11 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+import com.crumhealthtest.Abstract.AbstractComponent;
+
+public class LoginPage extends AbstractComponent{
 	WebDriver driver;
 	
 	public LoginPage(WebDriver driver) {
-		super();
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -29,15 +31,26 @@ public class LoginPage {
 	@FindBy(xpath="//p[@class='lead text-danger']")
 	WebElement errorMessage;
 	
-	public void login(String username, String password)
-	{
+	public void makeAppointment() {
 		makeAppointment.click();
+	}
+	
+	public AppointmentPage login(String username, String password)
+	{
+		
 		userName.sendKeys(username);
 		passWord.sendKeys(password);
 		loginbutton.click();
+		
+		return new AppointmentPage(driver);
 	}
 	
 	public String getErrorMsg() {
 		return errorMessage.getText();
+	}
+	
+	public String getPasswordType() {
+		waitforWebElement(passWord);
+		return passWord.getDomAttribute("type");
 	}
 }

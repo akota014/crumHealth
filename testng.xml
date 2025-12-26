@@ -6,7 +6,8 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.crumhealthtest.test.Rough"/>
+      <class name="com.crumhealthtest.test.VerifyUserLoginTest"/>
+      <class name="com.crumhealthtest.test.BookAppointmentTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

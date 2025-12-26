@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>E:\crumhealthtest\Test-suite\testng.xml</span>
+                    <span>E:\crumhealthtest\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,51 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.crumhealthtest.test.Rough" class="method navigator-link" hash-for-method="loginWithoutUsernameWithPassword">loginWithoutUsernameWithPassword</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crumhealthtest.test.BookAppointmentTest" class="method navigator-link" hash-for-method="bookAppointment">bookAppointment</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crumhealthtest.test.VerifyUserLoginTest" class="method navigator-link" hash-for-method="loginWithInalidUsernamePassword">loginWithInalidUsernamePassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crumhealthtest.test.VerifyUserLoginTest" class="method navigator-link" hash-for-method="loginWithInvalidUsernameValidPassword">loginWithInvalidUsernameValidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crumhealthtest.test.VerifyUserLoginTest" class="method navigator-link" hash-for-method="loginWithValidUsernameInvalidPassword">loginWithValidUsernameInvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crumhealthtest.test.VerifyUserLoginTest" class="method navigator-link" hash-for-method="loginWithValidUsernamePassword">loginWithValidUsernamePassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crumhealthtest.test.VerifyUserLoginTest" class="method navigator-link" hash-for-method="loginWithoutUsernamePassword">loginWithoutUsernamePassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crumhealthtest.test.VerifyUserLoginTest" class="method navigator-link" hash-for-method="passwordMasking">passwordMasking</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,30 +148,75 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.crumhealthtest.test.Rough</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.crumhealthtest.test.BookAppointmentTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithoutUsernameWithPassword">
-                  </a> <!-- loginWithoutUsernameWithPassword -->
-                  <span class="method-name">loginWithoutUsernameWithPassword</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [] but found [Login failed! Please ensure the username and password are valid.]
-	at com.crumhealthtest.test.Rough.loginWithoutUsernameWithPassword(Rough.java:14)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
+                  <a name="bookAppointment">
+                  </a> <!-- bookAppointment -->
+                  <span class="method-name">bookAppointment</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crumhealthtest.test.VerifyUserLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithInalidUsernamePassword">
+                  </a> <!-- loginWithInalidUsernamePassword -->
+                  <span class="method-name">loginWithInalidUsernamePassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithInvalidUsernameValidPassword">
+                  </a> <!-- loginWithInvalidUsernameValidPassword -->
+                  <span class="method-name">loginWithInvalidUsernameValidPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithValidUsernameInvalidPassword">
+                  </a> <!-- loginWithValidUsernameInvalidPassword -->
+                  <span class="method-name">loginWithValidUsernameInvalidPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithValidUsernamePassword">
+                  </a> <!-- loginWithValidUsernamePassword -->
+                  <span class="method-name">loginWithValidUsernamePassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithoutUsernamePassword">
+                  </a> <!-- loginWithoutUsernamePassword -->
+                  <span class="method-name">loginWithoutUsernamePassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passwordMasking">
+                  </a> <!-- passwordMasking -->
+                  <span class="method-name">passwordMasking</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\crumhealthtest\Test-suite\testng.xml</span>
+            <span class="header-content">E:\crumhealthtest\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -153,7 +228,8 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.crumhealthtest.test.Rough&quot;/&gt;
+      &lt;class name=&quot;com.crumhealthtest.test.VerifyUserLoginTest&quot;/&gt;
+      &lt;class name=&quot;com.crumhealthtest.test.BookAppointmentTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -167,7 +243,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -193,16 +269,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginWithoutUsernameWithPassword')
-data.setCell(0, 2, 'com.crumhealthtest.test.Rough')
-data.setCell(0, 3, 1560);
+data.setCell(0, 1, 'bookAppointment')
+data.setCell(0, 2, 'com.crumhealthtest.test.BookAppointmentTest')
+data.setCell(0, 3, 2266);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginWithValidUsernamePassword')
+data.setCell(1, 2, 'com.crumhealthtest.test.VerifyUserLoginTest')
+data.setCell(1, 3, 1709);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginWithoutUsernamePassword')
+data.setCell(2, 2, 'com.crumhealthtest.test.VerifyUserLoginTest')
+data.setCell(2, 3, 1516);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginWithInalidUsernamePassword')
+data.setCell(3, 2, 'com.crumhealthtest.test.VerifyUserLoginTest')
+data.setCell(3, 3, 1498);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginWithInvalidUsernameValidPassword')
+data.setCell(4, 2, 'com.crumhealthtest.test.VerifyUserLoginTest')
+data.setCell(4, 3, 1486);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'loginWithValidUsernameInvalidPassword')
+data.setCell(5, 2, 'com.crumhealthtest.test.VerifyUserLoginTest')
+data.setCell(5, 3, 1480);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'passwordMasking')
+data.setCell(6, 2, 'com.crumhealthtest.test.VerifyUserLoginTest')
+data.setCell(6, 3, 596);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -228,20 +328,93 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.crumhealthtest.test.Rough</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.crumhealthtest.test.VerifyUserLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">loginWithoutUsernameWithPassword</span>
-                <span class="method-start">5311 ms</span>
+                <span class="method-name">loginWithInalidUsernamePassword</span>
+                <span class="method-start">5058 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Close</span>
-                <span class="method-start">7086 ms</span>
+                <span class="method-start">6561 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">6619 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithInvalidUsernameValidPassword</span>
+                <span class="method-start">10625 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Close</span>
+                <span class="method-start">12113 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">12212 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithValidUsernameInvalidPassword</span>
+                <span class="method-start">16118 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Close</span>
+                <span class="method-start">17600 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">17643 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithValidUsernamePassword</span>
+                <span class="method-start">21702 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Close</span>
+                <span class="method-start">23413 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">23443 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithoutUsernamePassword</span>
+                <span class="method-start">27390 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Close</span>
+                <span class="method-start">28907 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">28981 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">passwordMasking</span>
+                <span class="method-start">33235 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Close</span>
+                <span class="method-start">33832 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crumhealthtest.test.BookAppointmentTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">33920 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">bookAppointment</span>
+                <span class="method-start">38345 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Close</span>
+                <span class="method-start">40611 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

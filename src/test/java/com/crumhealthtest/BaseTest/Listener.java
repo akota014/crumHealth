@@ -1,6 +1,7 @@
 package com.crumhealthtest.BaseTest;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
@@ -12,17 +13,15 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.crumhealthtest.resources.ExtentReporterNG;
 
-
-
-
 public class Listener extends BaseTest implements ITestListener {
 	ExtentReports extent = ExtentReporterNG.getExtentReportes();
-	ExtentTest test;
-	WebDriver driver;
+	
 	ThreadLocal<ExtentTest> extenttest = new ThreadLocal<>();
 	  public  void onTestStart(ITestResult result) {
 		    // not implemented
-		 	test = extent.createTest(result.getMethod().getMethodName());
+		  System.out.println("Start");
+		  String testName = result.getMethod().getMethodName();
+		 ExtentTest	test = extent.createTest(testName);
 		 	extenttest.set(test);
 		  }
 
@@ -35,6 +34,7 @@ public class Listener extends BaseTest implements ITestListener {
 		  public  void onTestSuccess(ITestResult result) {
 		    // not implemented
 			  extenttest.get().log(Status.PASS, "Passsed");
+			  System.out.println("PAss");
 		  }
 
 		  /**
@@ -45,23 +45,40 @@ public class Listener extends BaseTest implements ITestListener {
 		   */
 		  public  void onTestFailure(ITestResult result) {
 		    // not implemented
-			  extenttest.get().fail(result.getThrowable());
-			  String filepath = null;
-			
+			  extenttest.get().log(Status.FAIL, result.getThrowable());
 			  
+			  WebDriver driver = null;
+		       String screenshotPath = null;
+			
+			  System.out.println("I am printed");
 			  try {
-				  driver = (WebDriver)result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+				  driver = getDriverFromClass(result);
 			  }catch(Exception e) {
 				  e.printStackTrace();
-			  }	  
-			  try {
-					filepath = getScreenShot(driver,result.getMethod().getMethodName());
-					System.out.println("Screenshot");
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			  extenttest.get().addScreenCaptureFromPath(filepath,result.getMethod().getMethodName());
+			  }	
+			  if(driver !=null) {
+				  try {
+						screenshotPath = getScreenShot(driver,result.getMethod().getMethodName());
+						extenttest.get().addScreenCaptureFromPath(screenshotPath, result.getMethod().getMethodName());
+						System.out.println("Screenshot");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			  }
+			  else {
+				  System.out.println("Driver is null — cannot capture screenshot");
+			  }
+		  }
+		  
+		  private WebDriver getDriverFromClass(ITestResult result) throws Exception {
+			  Object testInstance = result.getInstance();
+		        Class<?> clazz = testInstance.getClass();
+
+		        Field driverField = clazz.getDeclaredField("driver");
+		        driverField.setAccessible(true);
+
+		        return (WebDriver) driverField.get(testInstance);
 		  }
 
 		  /**
@@ -114,6 +131,9 @@ public class Listener extends BaseTest implements ITestListener {
 		    // not implemented
 			  extent.flush();
 		  }
+		  
+		
+		
 		}
 
 

@@ -5,17 +5,21 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentReporterNG {
 	
-	
+	 private static ExtentReports extent;
 	public static ExtentReports getExtentReportes() {
-		String path = System.getProperty("user.dir")+"\\result\\index.html";
-		ExtentSparkReporter extent =new ExtentSparkReporter(path);
-		extent.config().setDocumentTitle("Test Report");
-		extent.config().setReportName("Web Automation Result");
-		
-		ExtentReports ex = new ExtentReports();
-		ex.attachReporter(extent);
-		ex.setSystemInfo("CrumHealth", "Srinibash");
-		return ex;
+		 if (extent == null) {
+	            String path = System.getProperty("user.dir") + "/reports/index.html";
+	            System.out.println(System.getProperty("user.dir"));
+	            ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+	            reporter.config().setReportName("Automation Results");
+	            reporter.config().setDocumentTitle("Test Results");
+
+	            extent = new ExtentReports();
+	            extent.attachReporter(reporter);
+	            extent.setSystemInfo("QA Engineer", "Your Name");
+	        }
+
+	        return extent;
 	}
 
 }

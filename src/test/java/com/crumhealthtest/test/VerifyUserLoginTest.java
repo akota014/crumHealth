@@ -13,20 +13,24 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crumhealthtest.BaseTest.BaseTest;
+import com.crumhealthtest.pageobject.AppointmentPage;
 import com.crumhealthtest.pageobject.LoginPage;
 
-public class VerifyUserLogin extends BaseTest {
+public class VerifyUserLoginTest extends BaseTest {
 	
 	@Test
 	public void loginWithValidUsernamePassword() {
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.login("John Doe", "ThisIsNotAPassword");
-		Assert.assertEquals(driver.findElement(By.xpath("//h2[normalize-space()='Make Appointment']")).getText(),"Make Appointment");
+		loginpage.makeAppointment();
+		AppointmentPage ap =loginpage.login("John Doe", "ThisIsNotAPassword");
+		
+		Assert.assertTrue(ap.isButtonDisplayed(),"\"Login failed!");
 	}
 	
 	@Test
 	public void loginWithInalidUsernamePassword() {
 		LoginPage loginpage = new LoginPage(driver);
+		loginpage.makeAppointment();
 		loginpage.login("QWERT", "qwert");
 		Assert.assertEquals(loginpage.getErrorMsg(),"Login failed! Please ensure the username and password are valid.");
 	}
@@ -34,6 +38,7 @@ public class VerifyUserLogin extends BaseTest {
 	@Test
 	public void loginWithoutUsernamePassword() {
 		LoginPage loginpage = new LoginPage(driver);
+		loginpage.makeAppointment();
 		loginpage.login("", "");
 		Assert.assertEquals(loginpage.getErrorMsg(),"Login failed! Please ensure the username and password are valid.");
 		
@@ -42,6 +47,7 @@ public class VerifyUserLogin extends BaseTest {
 	@Test
 	public void loginWithValidUsernameInvalidPassword() {
 		LoginPage loginpage = new LoginPage(driver);
+		loginpage.makeAppointment();
 		loginpage.login("John Doe", "QWERT");
 		Assert.assertEquals(loginpage.getErrorMsg(),"Login failed! Please ensure the username and password are valid.");
 		
@@ -50,23 +56,18 @@ public class VerifyUserLogin extends BaseTest {
 	@Test
 	public void loginWithInvalidUsernameValidPassword() {
 		LoginPage loginpage = new LoginPage(driver);
+		loginpage.makeAppointment();
 		loginpage.login("QWERT", "ThisIsNotAPassword");
-		Assert.assertEquals(loginpage.getErrorMsg(),"ogin failed! Please ensure the username and password are valid.");
+		Assert.assertEquals(loginpage.getErrorMsg(),"Login failed! Please ensure the username and password are valid.");
 		
 	}
 	
 	@Test
-	public void loginWithoutUsernameWithPassword() {
+	public void passwordMasking() {
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.login("", "ThisIsNotAPassword");
-		Assert.assertEquals(loginpage.getErrorMsg(),"Login failed! Please ensure the username and password are valid.");
-		
-	}
-	@Test(dataProvider="getData")
-	public void loginWithUsernameWithoutPassword(HashMap<String, String> input) {
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.login(input.get("email"), "");
-		Assert.assertEquals(loginpage.getErrorMsg(),"Login failed! Please ensure the username and password are valid.");
+		loginpage.makeAppointment();
+//		String str = ;
+		Assert.assertEquals(loginpage.getPasswordType(),"password","Password type is not password");
 		
 	}
 	

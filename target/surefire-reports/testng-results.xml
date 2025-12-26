@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-26T08:53:29 IST" name="Suite" finished-at="2025-12-26T08:54:15 IST" duration-ms="45643">
+    <groups>
+    </groups>
+    <test started-at="2025-12-26T08:53:29 IST" name="Test" finished-at="2025-12-26T08:54:15 IST" duration-ms="45643">
+      <class name="com.crumhealthtest.test.BookAppointmentTest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.crumhealthtest.test.BookAppointmentTest@4686afc2]" started-at="2025-12-26T08:54:06 IST" name="launchApp" finished-at="2025-12-26T08:54:12 IST" duration-ms="5453" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="bookAppointment()[pri:0, instance:com.crumhealthtest.test.BookAppointmentTest@4686afc2]" started-at="2025-12-26T08:54:12 IST" name="bookAppointment" finished-at="2025-12-26T08:54:15 IST" duration-ms="2994" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookAppointment -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.crumhealthtest.test.BookAppointmentTest@4686afc2]" started-at="2025-12-26T08:54:15 IST" name="Close" finished-at="2025-12-26T08:54:15 IST" duration-ms="114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+      </class> <!-- com.crumhealthtest.test.BookAppointmentTest -->
+      <class name="com.crumhealthtest.test.VerifyUserLoginTest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:29 IST" name="launchApp" finished-at="2025-12-26T08:53:35 IST" duration-ms="5532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="loginWithInalidUsernamePassword()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:35 IST" name="loginWithInalidUsernamePassword" finished-at="2025-12-26T08:53:36 IST" duration-ms="1577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInalidUsernamePassword -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:36 IST" name="Close" finished-at="2025-12-26T08:53:36 IST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:36 IST" name="launchApp" finished-at="2025-12-26T08:53:41 IST" duration-ms="4640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="loginWithInvalidUsernameValidPassword()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:41 IST" name="loginWithInvalidUsernameValidPassword" finished-at="2025-12-26T08:53:42 IST" duration-ms="1556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidUsernameValidPassword -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:42 IST" name="Close" finished-at="2025-12-26T08:53:43 IST" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:43 IST" name="launchApp" finished-at="2025-12-26T08:53:47 IST" duration-ms="4879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="loginWithValidUsernameInvalidPassword()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:47 IST" name="loginWithValidUsernameInvalidPassword" finished-at="2025-12-26T08:53:49 IST" duration-ms="1495" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidUsernameInvalidPassword -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:49 IST" name="Close" finished-at="2025-12-26T08:53:49 IST" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:49 IST" name="launchApp" finished-at="2025-12-26T08:53:53 IST" duration-ms="4298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="loginWithValidUsernamePassword()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:53 IST" name="loginWithValidUsernamePassword" finished-at="2025-12-26T08:53:55 IST" duration-ms="1616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidUsernamePassword -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:55 IST" name="Close" finished-at="2025-12-26T08:53:55 IST" duration-ms="97" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:55 IST" name="launchApp" finished-at="2025-12-26T08:53:59 IST" duration-ms="4049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="loginWithoutUsernamePassword()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:53:59 IST" name="loginWithoutUsernamePassword" finished-at="2025-12-26T08:54:01 IST" duration-ms="1485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithoutUsernamePassword -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:54:01 IST" name="Close" finished-at="2025-12-26T08:54:01 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:54:01 IST" name="launchApp" finished-at="2025-12-26T08:54:05 IST" duration-ms="4428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="passwordMasking()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:54:05 IST" name="passwordMasking" finished-at="2025-12-26T08:54:06 IST" duration-ms="1036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passwordMasking -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:com.crumhealthtest.test.VerifyUserLoginTest@13fd2ccd]" started-at="2025-12-26T08:54:06 IST" name="Close" finished-at="2025-12-26T08:54:06 IST" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+      </class> <!-- com.crumhealthtest.test.VerifyUserLoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

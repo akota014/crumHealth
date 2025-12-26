@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -24,13 +25,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	
-	public WebDriver driver;
+	public  WebDriver driver;
 	public LoginPage loginpage;
 	public WebDriver initializeDriver() {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions option=new ChromeOptions();
 		option.addArguments("headless");
-		driver = new ChromeDriver();
+		option.addArguments("--no-sandbox");
+		option.addArguments("--disable-dev-shm-usage");
+		final Map<String, Object> chromePrefs = new HashMap<>();
+		chromePrefs.put("credentials_enable_service", false);
+		chromePrefs.put("profile.password_manager_enabled", false);
+		chromePrefs.put("profile.password_manager_leak_detection", false);
+		option.setExperimentalOption("prefs", chromePrefs);
+		driver = new ChromeDriver(option);
 		return driver;
 	}
 	

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crumhealthtest.test.Rough">
+      <class name="com.crumhealthtest.test.BookAppointment">
         <methods>
-          <include name="loginWithoutUsernameWithPassword"/>
+          <include name="bookAppointment"/>
           <include name="Close"/>
           <include name="launchApp"/>
         </methods>
-      </class> <!-- com.crumhealthtest.test.Rough -->
+      </class> <!-- com.crumhealthtest.test.BookAppointment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
